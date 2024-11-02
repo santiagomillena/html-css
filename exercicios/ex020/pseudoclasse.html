@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Pseudo-classes</title>
+    <style>
+        div {
+            display: inline-block;
+            background-color: lightgray;
+            border: 1px solid black;
+            border-radius: 3px;
+            text-align: center;
+            height: 200px;
+            width: 200px;
+        }
+        div:hover{
+            background-color: yellow;
+            border: radius 4px;
+        }
+        #d1{
+            background-color: blue;
+        }
+        #d2{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="d1">01</div>
+    <div id="d2">02</div>
+    <div id="d3">03</div>
+</body>
+</html>
+
+<!-- Pseudo-classes são ideais para estados dinâmicos e posicionamento de elementos em relação aos seus irmãos ou pais.
+
+Pseudo-elementos são usados para inserir conteúdo ou estilizar partes específicas dentro de um elemento, como letras, linhas, ou adicionar elementos decorativos sem alterar o HTML.
+
+Se você está apenas estilizando um estado ou condição, use pseudo-classe. Se você está estilizando uma parte interna ou adicionando algo visualmente sem modificar o HTML, use pseudo-elemento. -->

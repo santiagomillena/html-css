@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Listas</title>
+</head>
+<body>
+    <h1>Trabalhando com Listas</h1>
+    <h2>Listas ordenadas</h2>
+    <!--O Elemento HTML <ol> representa uma lista de itens ordenados.-->
+    <!--Como utilizar a tag <ol>? Para criar uma lista ordenada deve ser utilizada a tag <ol> junto com a tag <li>. A tag <li> é definida como os itens a serem criados na lista, ou seja, deve ser utilizado uma <li> para cada item criado na lista. -->
+    <ol type="1" start="1"> <!--1 A a I i, o elemento start="x" define por onde começar a contagem.--> 
+         <!-- O elemento HTML <li> (ou a Lista dos Itens de um elemento HTML) é usado para representar um item que faz parte de uma lista.-->
+        <li>Acordar</li>
+        <li>Ligar para o João</li>
+        <li>Tomar café</li>
+        <li>Escovar os dentes</li>
+        <li>Ir para a faculdade</li>
+        <li>Almoçar</li>
+        <li>Ir para o trabalho</li>
+        <li>Voltar para casa</li>
+        <li>Jantar</li>
+        <li>Dormir</li>
+    </ol>
+    <h2>Listas não ordenadas</h2>
+    <!--O marcador <UL></UL> "Unordered List Element" é um elemento HTML que representa uma lista não ordenada-->
+    <ul type="square"> <!--disc circle square--> 
+        <li>Pão</li>
+        <li>Leite</li>
+        <li>Tomate</li>
+        <li>Arroz</li>
+        <li>Feijão</li>
+    </ul>
+    <h2>Minhas linguagens favoritas</h2>
+    <ol>
+        <li>Antigas</li>
+        <ol type="a">
+            <li>Clipper</li>
+            <li>Visual Basic</li>
+            <li>Fortram</li>
+            <li>Delphi</li>
+        </ol>
+        <li>Novas</li>
+        <ol type="a">
+            <li>PHP</li>
+            <li>Python</li>
+            <li>JavaScript</li>
+            <li>Kotlin</li>
+        </ol>
+    </ol>
+    <h2>Meus jogos favoritos</h2>
+    <ol>
+        <li>Super Nintendo</li>
+        <ul type="square">
+            <li>Mario</li>
+            <ul type="circle">
+                <li>Super Mario Wolrd</li>
+                <li>Super Mario Kart</li>
+            </ul>
+            <li>Donkey Kong</li>
+            <ul type="circle">
+                <li>Donkey Kong Country</li>
+                <li>Donkey Kong Country 3</li>
+            </ul>
+            <li>Super Bomberman</li>
+            <ul type="circle">
+                <li>Super Bomberman 3</li>
+                <li>Super Bomberman 4</li>
+            </ul>
+            <li>Street Fighter</li>
+            <li>Contra 3</li>
+            <li>Top Gear</li>
+        </ul>
+        <li>PlayStation One</li>
+        <ul type="square">
+            <li>Crash Bandicoot</li>
+            <ul type="circle">
+                <li>Crash Trilogy</li>
+                <li>Crash Bash</li>
+            </ul>
+        </ul>
+    </ol>
+    <h2>Lista de Definições</h2>
+    <dl>
+    <!--A tag dl serve para criar uma "description list"(lista de descrição). Ela usa as tags dt e dd para exibir dois termos relacionados. -->
+        <dt>Termo</dt> <!-- tag <dt> (Definição de Termo) identifica um termo na lista de definição. Este elemento pode ocorrer somente em um elemento filho de <dl> . Geralmente seguido por um elemento <dd> -->
+        <dd>Descrição</dd> <!--A tag HTML <dd> é usada para oferecer uma descrição ou definição para o termo encontrado na tag <dt> anterior em uma lista de descrição tag <dl> -->
+        <dt>HTML</dt>
+        <dd>Linguagem de marcação para a ciração do conteudo de um site.</dd>
+        <dt>CSS</dt>
+        <dd>Linguagem de marcação para a criação do design de um site.</dd>
+        <dt>JacaScript</dt>
+        <dd>Linguagem de programção para a criação de interatividade de um site.</dd>
+    </dl>
+</body>
+</html>

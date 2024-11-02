@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes com Google Fonts</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bungee+Tint&family=New+Amsterdam&display=swap');
+        /* 
+        o @import carrega um arquivo externo para dentro do CSS, tudo q começa com @import tem q ser colocado logo embaixo do style ou como primeiras linhas de um documento CSS separado, e fora de um seletor.
+        ememplo de seletor: body{}
+        prorpriedade: font-family: "New Amsterdam" --> valor; 
+        */
+        @import url('https://fonts.googleapis.com/css2?family=Bungee+Tint&display=swap');
+
+
+        body{
+            font-family: "New Amsterdam", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            }
+    
+        h1{
+            font-family: "Bungee Tint", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+
+            /* A ordem dos atributos de uma shorthand em CSS é importante. No caso da propriedade font, devemos informar, na ordem:
+            
+            font-style
+            font-variant
+            font-weight
+            font-size/line-height
+            font-family
+            
+            */
+        }
+    </style>
+</head>
+<body>
+    <h1>Título</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia nostrum doloremque aliquid. Facilis quam, ullam magnam est impedit nostrum consectetur, cumque minima veritatis laudantium accusantium? Vel quam quos ratione sint.</p>
+</body>
+</html>

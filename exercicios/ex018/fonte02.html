@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes Externas</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap');
+        @font-face {
+            font-family:'Vera';
+            src: url(Vera.ttf) format(truetype);
+            font-weight: normal;
+            font-style: normal;
+        }
+    /* 
+    A diretiva @font-face permite importar uma fonte a partir de um arquivo externo e utilizá-la como uma fonte nativa nas páginas HTML. A sua sintaxe básica é a seguinte:
+
+        @font-face {
+                font-family: [nome];
+                src: url([caminho]) format();
+                } 
+        Adicionamos format() depois da url() e especificamos o formato;
+
+            Tipos de format ()
+            - opentype (otf)
+            - truetype (ttf)
+
+                */
+    
+        body{
+            font-family: "New Amsterdam", system-ui;
+            font-weight: 400;
+            font-style: normal;
+        }
+        h1{
+            font-family: 'Vera', Times, serif;
+            font-size: 3em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Título</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, eveniet commodi? Tempore deleniti exercitationem cumque pariatur autem, minima enim vitae voluptatem dignissimos, magni vel recusandae assumenda. Tempore quod optio saepe!</p>
+</body>
+</html>
