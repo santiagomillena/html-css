@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: ;
+    src: url();
+}
+* {
+    margin: 0px;
+}
+header{
+    background-color: black;
+    height: 200px;
+}
+header > h1{
+    color: white;
+    text-align: center;
+    padding-top: 40px;
+    margin: 0px;
+    font-size: 4rem;
+}
+header > p{
+    color: white;
+    text-align: center;
+    margin: 0px;
+    padding-top: 10px;
+    font-size: 1.2rem;
+}
+header > p > a {
+    text-decoration: none;
+    color: white;
+}
+header > p > a:hover{
+    color: aqua;
+}
+p {
+    margin: 20px;
+}
+footer{
+    background-color: black;
+
+}
+footer > p {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    padding: 8px;
+}
+footer > p > a{
+    text-decoration: none;
+    color: white;
+}
+
+footer > p > a:hover{
+    color: aqua;
+    text-decoration: none;
+}
