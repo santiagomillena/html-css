@@ -65,15 +65,43 @@
 
 <!--
 
-height: 100vh;  -> Define a altura de um elemento. Pode ser especificada em pixels (px), porcentagem (%), ou outras unidades de medida
-background-color: black; ->Define a cor de fundo de um elemento. Aceita valores em hexadecimal, RGB, RGBA ou palavras-chave (como red, blue).
-background-image: url(imagens/wallpaper002.jpg); -> Define uma imagem de fundo para o elemento. Pode receber uma URL de uma imagem ou gradientes
-background-position: center center; -> Controla a posição da imagem de fundo. Aceita valores como top, center, bottom, left, right, ou valores em pixels e porcentagens.
+height: 100vh;  -> Define a altura de um elemento. Pode ser especificada em pixels (px), porcentagem (%), ou outras unidades de medida.Por exemplo:
+
+    height: 200px;
+
+background-color: black; ->Define a cor de fundo de um elemento. Aceita valores em hexadecimal, RGB, RGBA ou palavras-chave (como red, blue).Exemplo:
+
+    background-color: #f0f0f0;
+
+background-image: url(imagens/wallpaper002.jpg); -> Define uma imagem de fundo para o elemento. Pode receber uma URL de uma imagem ou gradientes.Exemplo:
+
+    background-image: url('imagem.jpg');
+    background-image: linear-gradient(to bottom, yellow, red);
+
+background-position: center center; -> Controla a posição da imagem de fundo. Aceita valores como top, center, bottom, left, right, ou valores em pixels e porcentagens.Exemplo:
+
+    background-position: center;
+
 background-repeat: repeat-y; ->  Define se a imagem de fundo deve se repetir e em quais direções. As opções principais são:
+    repeat (repete nas duas direções)
+    repeat-x (repete horizontalmente)
+    repeat-y (repete verticalmente)
+    no-repeat (não repete)
+    
+    background-repeat: no-repeat;
+
 background-size: cover; -> Define o tamanho da imagem de fundo. Pode ser em pixels, porcentagem, ou palavras-chave como:
-background-attachment: fixed; -> Controla se a imagem de fundo deve rolar com o conteúdo ou permanecer fixa;
-scroll: a imagem rola junto com o conteúdo.
-fixed: a imagem fica fixa enquanto o conteúdo rola.
-local: a imagem rola junto com o elemento.
+    cover: a imagem cobre todo o elemento, mantendo a proporção.
+    contain: a imagem é redimensionada para caber no elemento, mantendo a proporção.
+
+    background-size: cover;
+
+background-attachment: fixed; -> Controla se a imagem de fundo deve rolar com o conteúdo ou permanecer fixa.Os valores comuns são:
+
+    scroll: a imagem rola junto com o conteúdo.
+    fixed: a imagem fica fixa enquanto o conteúdo rola.
+    local: a imagem rola junto com o elemento.
+
+    background-attachment: fixed;
 
  -->
