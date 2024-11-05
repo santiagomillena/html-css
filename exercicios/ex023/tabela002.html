@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+        }
+        table {
+            width: 500px;
+            border-collapse: collapse;
+            position: relative;
+        }
+        thead, tfoot {
+            background-color: gray;
+            color: white;
+        }
+        thead > tr > th{
+            position: sticky;
+            top: -1px;
+            background-color: gray;
+        }
+        th {
+            border: 1px solid black;
+            padding: 10px;
+        }
+        td {
+            border: 1px solid black;
+            text-align: left;
+            padding: 10px;
+        }
+        td.num{
+            text-align: right;
+        }
+
+        tbody > tr:nth-child(2n){
+            background-color: lightgrey;
+        }
+    </style>
+</head>
+<body>
+    <h1>Uso de tabelas grandes</h1>
+    <!-- ANATOMIA PARA TABELAS GRANDES
+    TABBLE
+        CAPTION
+        THEAD
+            TR, TD, TH
+        TBODY
+            TR, TD, TH
+        TFOOT 
+            TR, TD, TH -->
+
+    <table>
+        <caption>População das Unidades Federativas</caption>
+        <thead>
+            <tr>
+                <th scope="col"> Estado </th>
+                <th scope="col" style="width: 50px;"> População </th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>São Paulo</td>
+                <td class="num">49 919 049</td>
+            </tr>
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="num">21 168 791</td>
+            </tr>
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="num">17 264 943</td>
+            </tr>
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="num">17 264 943</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <th scope="row">Total de Habitantes</th>
+            <td class="num"><strong>0000</strong></td>
+        </tfoot>
+    </table>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus necessitatibus aspernatur, enim laboriosam magnam error totam rerum labore nihil tempora ipsum voluptates molestias quisquam ad cupiditate iste perferendis voluptatibus deleniti.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, repellendus. Dolore, mollitia illo. Sunt molestias modi totam? Quidem animi quo praesentium odio distinctio rerum, laborum provident quasi omnis ut totam.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium aperiam doloribus sed aspernatur ullam, harum, veritatis voluptate quia nobis ex laboriosam adipisci. Magnam vero beatae eligendi magni nostrum dolorum dignissimos?
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur rem illo porro culpa fugiat, necessitatibus reiciendis excepturi quasi quam id amet deleniti asperiores pariatur temporibus nobis ab modi nihil. Alias!
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro vero eveniet at rem! Veritatis modi incidunt, consequatur nam alias distinctio ratione perferendis quidem. Sunt temporibus inventore molestiae accusamus delectus est?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae ullam voluptate pariatur quaerat cum iste maxime, ea ipsum voluptas exercitationem vel officia ex id beatae natus suscipit voluptatum alias deserunt?
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione tempora nemo dolorum optio quibusdam perspiciatis est illum velit autem inventore ducimus, veritatis possimus. Repellendus asperiores ratione ea quas, suscipit veniam!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi maxime veniam libero placeat odit quae at et enim ad. Maxime, fuga! Voluptatem tenetur, deleniti consectetur omnis nobis amet molestias itaque.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, minus repellat doloribus quisquam odit harum porro iusto eveniet omnis sequi deserunt soluta ratione voluptas iste libero delectus mollitia consequatur amet.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore tempora ab libero doloremque? Aut natus eaque vel repellendus tenetur impedit sint? Ullam exercitationem neque porro impedit qui, cumque eos cupiditate!
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur, aspernatur eos eveniet voluptate fuga nesciunt quaerat beatae, deserunt tempora hic a voluptatum consectetur architecto iure odio debitis earum sint numquam.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, aperiam dolore. Doloribus neque nostrum reprehenderit placeat perferendis facere qui magnam odit, sint, tempore iure minus, ipsa atque vero sit aut.
+    </p>
+</body>
+</html>
+
+<!--
+
+ESCOPOS DOS TH:
+
+Os desenvolvedores iniciantes geralmente confundem muito aquilo que é "th" com aquilo que é "td"... Eles se confundem no momento de escolher se irão usar th ou td... E na dúvida acabam usando o td para tudo, é aí que mudam o significado das coisas. Isso é ruim porque no HTML o significado dos elementos é algo muito importante.
+
+Você pode usar a tag th (table header) sempre que precisar criar uma célula de título, de rótulo... Essa tag (th) serve para especificarmos o título de uma coluna ou até mesmo de uma linha. Essa tag também não precisa ser usada exclusivamente dentro da área da cabeça (thead)... Por exemplo, na área do rodapé (tfoot) podemos ter a necessidade de usar uma célula de título... Ex: cell = " Total de Habitantes: " - Nesse caso podemos usar o th sem problema nenhum, mesmo sendo no rodapé da tabela, visto que é um título.
+
+Células de Título = th
+
+Células de Dado = td (um dado pode ser em forma textual também, nem sempre é um número)
+
+Como foi dito, você pode usar a tag th para determinar um título. Na sua tabela, esse título pode ser referente à uma COLUNA (dados abaixo da célula de título) ou uma LINHA (dados ao lado da célula de título).
+
+Dessa forma, existe um parâmetro para a tag th, e esse parâmetro serve justamente para especificarmos se o título da nossa célula é para uma coluna ou para uma linha. Esse parâmetro é o " scope ", você deve inseri-lo dentro da tag de abertura do th.
+
+!!!!! Se o título da sua célula for para uma COLUNA, use como definição do parâmetro " scope " o VALOR " col ". !!!!!
+
+!!!!! Se o título da sua célula for para uma LINHA, use como definição do parâmetro " scope " o VALOR " row ". !!!!!
+
+Esse parâmetro é importante para que os mecanismos de busca (google por ex) consigam analisar dos dados da sua tabela de forma coerente, de forma que faça sentido. Tais parâmetros não causam nenhum resultado visual, mas é muito útil de um ponto de vista semântico.
+
+
+---------------------------another def---------------------------------
+
+Scope de títulos em tabelas
+
+	   - Sem efeitos visuais, apenas semânticos;
+
+Indicando que o th é relativo aos dados que estão na mesma coluna do mesmo:
+
+	<th scope="col">    </th>	
+
+Indicando que o th é relativo aos dados que estão na mesma linha do mesmo:
+
+	<th scope="row">    </th>
+
+ Ex:     <th scope="col">Estado</th>
+        <th scope="row">Total de Habitantes</th>
+
+ o titulo(th) dessa coluna(col) se refere á essa coluna
+ o titulo(th) nessa linha se refere á essa linha(row) 
+
+ ------------------- efeito zebrado -------------------------
+
+ Para criar o efeito zebrado dentro das linhas da sua tabela, é importante que determinemos em que parte da tabela queremos aplicar esse efeito, geralmente aplicamos somente nas linhas da parte do corpo da tabela (tbody).
+
+Para fazer isso, basicamente devemos abrir um seletor para o elemento " tbody ", indicado o seu filho direto que queremos formatar, que no caso é o " tr " (linha de tabela)... No elemento tr, iremos usar a pseudo-classe " nth-child() ". Para essa pseudo-classe, devemos inserir um valor dentro dos parênteses: O valor para aplicar o efeito zebrado é o " 2n ", que faz com que o background-color configurado para a linha seja inserido de duas em duas linhas, uma sim e uma não (mude o valor numérico se desejar um intervalo maior de inserção).
+
+
+Usar a pseudo-classe	:nth-child( )
+
+ - Para linhas pares usar (even) ou (2n);
+ - Para linhas ímpares usar (odd) ou (2n-1).
+
+ Ex:	
+    
+    tbody > tr:nth-child(odd) { (os impár vão ficar 'branco')
+            background-color: white;	(opcional quando o fundo já for branco)
+	}
+
+	tbody > tr:nth-child(even) { (os pares vão ficar 'cinza claro')
+            background-color: lightgray;
+	}
+-->
