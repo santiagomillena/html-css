@@ -117,9 +117,13 @@ Como foi dito, você pode usar a tag th para determinar um título. Na sua tabel
 
 Dessa forma, existe um parâmetro para a tag th, e esse parâmetro serve justamente para especificarmos se o título da nossa célula é para uma coluna ou para uma linha. Esse parâmetro é o " scope ", você deve inseri-lo dentro da tag de abertura do th.
 
-!!!!! Se o título da sua célula for para uma COLUNA, use como definição do parâmetro " scope " o VALOR " col ". !!!!!
 
-!!!!! Se o título da sua célula for para uma LINHA, use como definição do parâmetro " scope " o VALOR " row ". !!!!!
+----- Se o título da sua célula for para uma COLUNA, use como definição do parâmetro "scope" o VALOR "col".
+        <th scope="col">  </th>
+
+----- Se o título da sua célula for para uma LINHA, use como definição do parâmetro "scope" o VALOR "row". 
+        <th scope="row">    </th>
+
 
 Esse parâmetro é importante para que os mecanismos de busca (google por ex) consigam analisar dos dados da sua tabela de forma coerente, de forma que faça sentido. Tais parâmetros não causam nenhum resultado visual, mas é muito útil de um ponto de vista semântico.
 

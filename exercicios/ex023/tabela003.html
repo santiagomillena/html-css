@@ -259,3 +259,37 @@
     </table>
 </body>
 </html>
+
+<!-- Como nós já sabemos, usamos a tag " th " sempre que queremos criar uma célula de título. Na sua tabela, esse título pode ser referente à uma COLUNA (dados abaixo da célula de título) ou uma LINHA (dados ao lado da célula de título)... Chamamos esse apontamento de onde estão os dados de escopo. 
+
+Anteriormente nós vimos como aplicar e utilizar escopos simples para os th, usando o parâmetro scope com os valores col ou row... Esses valores servem apenas para apontarmos colunas ou linhas de forma única (apenas uma linha ou coluna). Agora, se na nossa tabela temos uma célula de título que foi expandida e que abrange mais de uma linha ou mais de uma coluna, temos que utilizar os escopos de grupo:
+
+Se o título da sua célula for para uma COLUNA, use como definição do parâmetro "scope" o VALOR "col".
+        <th scope="col">  </th>
+
+
+ Se o título da sua célula for para uma LINHA, use como definição do parâmetro "scope" o VALOR "row". 
+        <th scope="row">    </th>
+
+Obs.: O W3C recomenda que você SEMPRE USE os escopos em toda e qualquer célula de título ( th ).
+
+ESCOPOS DE GRUPO:
+
+Os escopos de grupo são os seguintes: " colgroup " e " rowgroup " (usar como valor no parâmetro "scope" ). Eles são utilizados para associarmos determinados títulos ( th EXPANDIDO ) à um GRUPO de linhas ou um GRUPO de colunas.
+
+Basicamente, você deve usar os valores de escopo em grupo sempre que a sua célula de título abranger mais de uma linha (conjunto de linhas) ou mais de uma coluna (conjunto de colunas). Se você usar um valor simples (col/row) para apontar para um conjunto, somente a primeira linha ou a primeira coluna desse conjunto será considerada nesse apontamento... Isso não deve ser feito.
+
+Nota: Quando usamos expansão/mesclagem em uma célula de título, nós temos que analisar o apontamento do escopo pelo grupo e não pelo individual.
+
+Entretanto, não é sempre que uma célula de título com expansão/mesclagem irá precisar ter um escopo em grupo. Por mais que o título tenha mesclagem, --((se os dados desse título estiverem em uma única linha por exemplo, o escopo deve ser simples.)--) Uma célula de título expandida não obrigatoriamente tem que ter um escopo em grupo, é importante que você tenha essa noção e saiba avaliar cada caso.
+
+📝  ESCOPOS DE GRUPO
+
+Escopo em grupo de colunas:	<th colspan="  " scope="colgroup">      </th>
+
+   Ex:	<th colspan="3" scope="colgroup">Filmes</th>
+
+Escopo em grupo de linhas:	<th rowspan="  " scope="rowgroup">      </th>
+
+   Ex:	<th rowspan="3" scope="rowgroup">Mulheres</th>
+   -->
