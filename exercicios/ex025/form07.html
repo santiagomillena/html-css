@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário 07</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de Formulário</h1>
+    <form action="cadastro.php" method="post">
+        <p>
+            <label for="est">Estado</label>
+            <select name="est" id="est" required>
+
+                <option value="" selected disabled>Escolha...</option>
+
+                <option value="AC">Acre</option>
+                <option value="AL">Alagoas</option>
+                <option value="AP">Amapá</option>
+                <option value="AM">Amazonas</option>
+                <option value="BA">Bahia</option>
+                <option value="CE">Ceará</option>
+                <option value="ES">Espírito Santo</option>
+                <option value="GO">Goiás</option>
+                <option value="MA">Maranhão</option>
+                <option value="MT">Mato Grosso</option>
+                <option value="MS">Mato Grosso do Sul</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="PA">Pará</option>
+                <option value="PB">Paraíba</option>
+                <option value="PR">Paraná</option>
+                <option value="PE">Pernambuco</option>
+                <option value="PI">Piauí</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="RN">Rio Grande do Norte</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="RO">Rondônia</option>
+                <option value="RR">Roraima</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="SP">São Paulo</option>
+                <option value="SE">Sergipe</option>
+                <option value="TO">Tocantins</option>
+                
+                <optgroup label="Região Sudeste">
+                    <option value="MG">Minas Gerais</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="SP">São Paulo</option>
+                </optgroup>
+
+                <optgroup label="Região Nordeste">
+                    <option value="MA">Maranhão</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                </optgroup>
+
+            </select>
+        </p>
+        <p>
+            <label for="prof">Profissão</label>
+            <input type="text" name="prof" id="prof" list="lstprof">
+            <datalist id="lstprof">
+                <option>Admnistrador</option>
+                <option>Contabilista</option>
+                <option value="DEV">Desenvolvedor</option>
+                <option value="PROF">Professor</option>
+            </datalist>
+        </p>
+        <p>
+            <label for="msg">Mensagem</label> <br>
+            <textarea name="msg" id="msg" cols="30" rows="10" placeholder="Digite sua mensagem aqui" style="resize: none;"></textarea>
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>
+
+<!-- 
+🔸<select>: Lista suspensa com opções definidas.
+🔸<option>: Cada opção individual dentro de <select> ou <optgroup>.
+🔸<optgroup>: Agrupa <option> em categorias dentro de <select>.
+🔸<datalist>: Lista de sugestões para campos de entrada <input>.
+🔸<textarea>: Caixa de texto de múltiplas linhas para entradas maiores.
+
+Dentro de uma lista de seleção do elemento select, os options (itens da lista) podem ser AGRUPADOS em categorias intituladas, isso facilita a navegação do usuário. Por exemplo, na nossa lista com os estados do Brasil, poderíamos organizar esses estados pelas regiões do país, categorizar eles por região... Dessa maneira, quando a lista de seleção for aberta, os estados iriam aparecer agrupados por região, sendo que cada um desses grupos de estado teriam um título (sudeste, sul, centro-oeste e por aí vai).
+
+Para fazer isso, utilizamos a tag <optgroup></optgroup>. Para formar um grupo dentro da lista de seleção com o optgroup, você deve envelopar com essa tag os itens (options) que supostamente fazem parte daquele grupo. Sendo que obrigatoriamente, quando uma tag optgroup é aberta, temos que usar nela o atributo "label" (é um atributo que se chama label, não é uma tag label). O texto inserido dentro do atributo label que será exibido para o usuário como o título daquele grupo quando a lista for aberta.  
+
+Nota: Os itens da lista de seleção (options) ficam dispostos para o usuário na ordem de inserção do código HTML. 
+
+Atributos do select:
+
+selected:
+
+O atributo selected serve para definirmos uma opção inicial padrão, ele deve ser inserido dentro da tag de abertura do option que você deseja definir como padrão. Dessa forma, quando a página com o elemento select for carregada, essa opção escolhida já vai aparecer por padrão selecionada no componente de entrada select, ficando a critério do usuário alterar a opção ou manter a padrão determinada por você.
+
+
+💡Para não deixar o usuário enviar o formulário sem escolher uma opção do select podemos deixar a option -Escolha- com o atributo disabled e na tag select deixar o atributo required;
+
+    <select name="est" id="est" required>
+
+        <option value="" selected disabled>Escolha...</option>
+
+💡Podemos usar o atributo  style="resize: none" para evitar que o usuário altere o tamanho do textarea...
+
+<textarea name="msg" id="msg" cols="30" rows="10" placeholder="Digite sua mensagem aqui" style="resize: none;"></textarea>
+
+-->
