@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Teste de formulário</h1>
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <p>
+         <label for="inome">Nome</label>
+         <input type="text" name="nome" id="inome" required maxlength="40" placeholder="Digite seu nome completo" autocomplete="name"> <!-- <input type="text"> defines a single-line text input field. -->
+        </p>
+        
+        <p>
+            <label for="imedia">Média</label>
+            <input type="number" name="media" id="imedia" required placeholder="Números" min="0" max="10" step="0.5" value="5">
+        </p>
+        <p>
+            <label for="imes">Período letivo</label>
+            <input type="month" name="mes" id="imes" value="2024-11">
+        </p>
+        <p>
+            <label for="idate">Dia da Prova</label>
+            <input type="date" name="dia" id="idia" value="2024-11-09">
+        </p>
+        <p>
+            <label for="ihora">Horário da Prova</label>
+            <input type="time" name="hora" id="ihora">
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+
+        <h2>Exemplo da apostila:</h2>
+        <form action="cadastro.php">
+            <p>
+                <label for="inome">Nome</label>
+                <input type="text" name="nome" id="inome" required maxlength="40" placeholder="Digite seu nome completo" autocomplete="name">
+               </p>
+            <p>
+                <label for="ifoto">Foto de perfil:</label>
+                <input type="file" name="foto" id="ifoto" accept="image/*">
+            </p>
+            <p>
+                <label for="iidade">Idade:</label>
+                <input type="number" name="idade" id="iidade" min="1" max="120">
+            </p>
+            <p>
+                <fieldset style="width: 100px;">
+                    <legend>Sexo</legend>
+                    <!--tem q ser nessa ordem  (1ºinput > 2ºlabel) para que a opção de seleção seja na esquerda.-->
+                    <input type="radio" name="sex" id="isexmasc" checked value="masculino"> 
+                    <label for="isexmasc">Masculino</label>
+                    <input type="radio" name="sex" id="isexfem" value="feminino">
+                    <label for="isexfem">Feminino</label>
+                </fieldset>
+            </p>
+            <p>
+                <label for="itel">Telefone:</label>
+                <input type="tel" name="tel" id="itel" pattern="\([0-9]{2}\)([\s])[0-9]{4,6}-[0-9]{4}" placeholder="(XX) XXXX-XXXX">
+            </p>
+            <p>
+                <label for="imail">E-mail:</label>
+                <input type="email" name="mail" id="imail">
+            </p>
+            <p>
+                <label for="ipass">Senha:</label>
+                <input type="password" name="pass" id="ipass" minlength="8">
+            </p>
+            <p>
+                <label for="imes">Mês de aniversário:</label>
+                <input type="month" name="mes" id="imes">
+            </p>
+            <p>
+                <label for="idata">Data da Compra:</label>
+                <input type="date" name="date" id="idata">
+            </p>
+            <p>
+                <label for="hora">Hora da Compra:</label>
+                <input type="time" name="hora" id="ihora">
+            </p>
+            <p>
+                <label for="icor">Cor:</label>
+                <input type="color" name="cor" id="icor" value="#00000">
+            </p>
+            <p>
+                <label for="isat">Nível de satisfação:</label>
+                <input type="range" name="sat" id="isat" min="0" max="4" value="2">
+            </p>
+            <p>
+                <input type="checkbox" name="aceito" id="iaceito">
+                <label for="iaceito">Aceito os <a href="termos.html" target="_blank">termos de uso</a></label>
+            </p>
+            
+            <p>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </p>
+        </form>
+    </form> <br>
+
+    <p>Exemplos da 3WSchools</p>
+    <p>Choose your favorite Web language:</p>
+<form>
+  <input type="radio" id="html" name="fav_language" value="HTML">
+  <label for="html">HTML</label><br>
+  <input type="radio" id="css" name="fav_language" value="CSS">
+  <label for="css">CSS</label><br>
+  <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+  <label for="javascript">JavaScript</label>
+</form> <br>
+<form>
+    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+    <label for="vehicle1"> I have a bike</label><br>
+    <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+    <label for="vehicle2"> I have a car</label><br>
+    <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+    <label for="vehicle3"> I have a boat</label>
+  </form>
+</body>
+</html>
+
+<!-- ------ Tipos Comuns de <input> e Suas Funções - ChatGPT -------------
+
+🔸Text (type="text")
+    Definição: Campo de texto padrão para entrada de uma única linha.
+    Uso: Ideal para nome, endereço, etc.
+    Exemplo:
+
+        <input type="text" name="nome" placeholder="Digite seu nome">
+
+🔸Password (type="password")
+
+    Definição: Campo que oculta os caracteres inseridos, mostrando-os como pontos ou asteriscos.
+    Uso: Senhas ou informações sensíveis.
+    Exemplo:
+
+        <input type="password" name="senha" placeholder="Digite sua senha">
+
+🔸Email (type="email")
+
+    Definição: Campo que espera um endereço de email no formato exemplo@dominio.com.
+    Uso: E-mails e validação básica de formato de email.
+    Exemplo:
+
+        <input type="email" name="email" placeholder="Digite seu email">
+
+🔸Number (type="number")
+
+    Definição: Campo que aceita apenas números e permite a especificação de valores mínimos e máximos.
+    Uso: Idades, quantidades, preços, etc.
+    Exemplo:
+    
+        <input type="number" name="quantidade" min="1" max="10">
+
+🔸Date (type="date")
+
+    Definição: Campo que permite ao usuário selecionar uma data de um calendário.
+    Uso: Datas de nascimento, reservas, etc.
+    Exemplo:
+    
+        <input type="date" name="data_nascimento">
+
+🔸Color (type="color")
+
+    Definição: Campo que exibe uma paleta de cores para o usuário selecionar.
+    Uso: Escolha de cores para personalizações, temas, etc.
+    Exemplo:
+    
+        <input type="color" name="cor_favorita">
+
+🔸Checkbox (type="checkbox")
+
+    Definição: Caixa de seleção que pode ser marcada ou desmarcada.
+    Uso: Preferências, consentimentos, seleções múltiplas.
+    Exemplo:
+    
+        <input type="checkbox" name="aceitar_termos"> Aceito os termos e condições
+
+🔸Radio (type="radio")
+
+    Definição: Botões de seleção exclusiva, permitindo que apenas uma opção de um grupo seja escolhida.
+    Uso: Gênero, preferências exclusivas.
+    Exemplo:
+    
+        <input type="radio" name="genero" value="masculino"> Masculino
+        <input type="radio" name="genero" value="feminino"> Feminino
+
+🔸File (type="file")
+
+    Definição: Permite ao usuário fazer upload de arquivos.
+    Uso: Anexar imagens, documentos, etc.
+    Exemplo:
+    
+        <input type="file" name="arquivo">
+
+🔸Submit (type="submit")
+
+    Definição: Botão que envia o formulário.
+    Uso: Finalizar e enviar o formulário.
+    Exemplo:
+    
+        <input type="submit" value="Enviar">
+
+🔸Button (type="button")
+
+    Descrição: Um botão que não faz nada por si só; pode ser configurado para executar ações com JavaScript.
+    Exemplo:
+        <input type="button" value="Clique aqui">
+
+🔸Checkbox (type="checkbox")
+
+    Descrição: Caixa de seleção que pode ser marcada ou desmarcada.
+    Exemplo:
+        <input type="checkbox" name="aceitar_termos"> Aceito os termos e condições
+
+🔸Color (type="color")
+
+    Descrição: Permite selecionar uma cor em uma paleta.
+    Exemplo:
+        <input type="color" name="cor_favorita">
+
+🔸Date (type="date")
+
+    Descrição: Campo para escolher uma data com calendário.
+    Exemplo:
+        <input type="date" name="data">
+
+🔸Datetime-local (type="datetime-local")
+
+    Descrição: Campo para data e hora (sem fuso horário).
+    Exemplo:
+        <input type="datetime-local" name="data_hora">
+
+🔸Email (type="email")
+
+    Descrição: Campo que exige um endereço de e-mail.
+    Exemplo:
+        <input type="email" name="email" placeholder="exemplo@dominio.com">
+
+🔸File (type="file")
+
+    Descrição: Permite ao usuário fazer upload de um arquivo.
+    Exemplo:
+        <input type="file" name="arquivo">
+
+🔸Hidden (type="hidden")
+
+    Descrição: Campo oculto que envia dados invisíveis ao usuário.
+    Exemplo:
+        <input type="hidden" name="id_usuario" value="12345">
+
+🔸Image (type="image")
+
+    Descrição: Botão de envio personalizado com uma imagem.
+    Exemplo:
+        <input type="image" src="imagem.png" alt="Enviar">
+
+🔸Month (type="month")
+
+    Descrição: Campo para selecionar um mês e ano.
+    Exemplo:
+        <input type="month" name="mes">
+
+🔸Number (type="number")
+
+    Descrição: Campo que aceita apenas números.
+    Exemplo:
+        <input type="number" name="idade" min="0" max="120">
+
+🔸Password (type="password")
+
+    Descrição: Campo para entrada de senhas (oculta caracteres).
+    Exemplo:
+        <input type="password" name="senha">
+
+🔸Radio (type="radio")
+
+    Descrição: Botões de seleção única.
+    Exemplo:
+        <input type="radio" name="genero" value="masculino"> Masculino
+        <input type="radio" name="genero" value="feminino"> Feminino
+
+🔸Range (type="range")
+
+    Descrição: Um controle deslizante para escolher um valor entre um mínimo e um máximo.
+    Exemplo:
+        <input type="range" name="volume" min="0" max="100">
+
+🔸Reset (type="reset")
+
+    Descrição: Botão que redefine todos os campos do formulário.
+    Exemplo:
+        <input type="reset" value="Limpar formulário">
+
+🔸Search (type="search")
+
+    Descrição: Campo de pesquisa, com estilo específico em alguns navegadores.
+    Exemplo:
+        <input type="search" name="busca" placeholder="Pesquisar...">
+
+🔸Submit (type="submit")
+
+    Descrição: Botão que envia o formulário.
+    Exemplo:
+        <input type="submit" value="Enviar">
+
+🔸Tel (type="tel")
+
+    Descrição: Campo para inserir números de telefone.
+    Exemplo:
+        <input type="tel" name="telefone" placeholder="(XX) XXXXX-XXXX">
+
+🔸Text (type="text")
+
+    Descrição: Campo de texto de linha única para entrada de dados.
+    Exemplo:
+        <input type="text" name="nome" placeholder="Digite seu nome">
+
+🔸Time (type="time")
+
+    Descrição: Campo para seleção de hora.
+    Exemplo:
+        <input type="time" name="hora">
+
+🔸URL (type="url")
+
+    Descrição: Campo que espera um endereço de URL.
+    Exemplo:
+        <input type="url" name="website" placeholder="https://exemplo.com">
+
+🔸Week (type="week")
+
+Descrição: Campo para selecionar uma semana e ano.
+Exemplo:
+<input type="week" name="semana">
+
+    📍Dicas de Uso 
+    Atributos Adicionais: Pode adicionar atributos como 🔹placeholder (texto descritivo), 🔹required (campo obrigatório), 🔹min e 🔹max para definir intervalos, e 🔹pattern para definir expressões regulares de validação.
+    Estilos e Personalização: Embora muitos <input> tenham aparência padrão, é possível customizá-los com CSS para que fiquem visivelmente integrados ao design do site. 
+
+    💭 É mesmo necessário especificar o "value" quando o input for do tipo "radio"? 💭
+
+        Sim, é recomendado especificar o atributo value quando o <input> é do tipo radio, pois ele define o valor que será enviado ao servidor ou manipulado em scripts quando o botão de rádio for selecionado.
+        Exemplo sem value:
+     
+        <input type="radio" name="genero"> Masculino
+        <input type="radio" name="genero"> Feminino
+
+        Nesse caso, o formulário enviará o campo genero sem valor específico, dificultando a identificação de qual opção foi escolhida.
+        Exemplo com value:
+     
+        <input type="radio" name="genero" value="masculino"> Masculino
+        <input type="radio" name="genero" value="feminino"> Feminino
+
+        Com o value especificado, quando o usuário seleciona "Masculino", por exemplo, o valor enviado será genero=masculino, facilitando a manipulação do dado.
+
+        Conclusão
+        Sem value, o campo de um botão de rádio é praticamente inútil para o processamento de dados, pois não permite identificar a escolha do usuário.
+----------------------------------------------------------------------------
+
+
+    🔸🔹💡📍📌💭  
+    -->
