@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário 06</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de Formulário</h1>
+    <form action="cadastro.php" method="post">
+            <label for="cor">Selecione sua cor favorita: </label>
+            <input type="color" name="cor" id="cor" value="#ffffff">
+        
+        <p>
+            <label for="nivel">Nível de Satisfação</label>
+            <input type="range" name="nivel" id="nivel" min="1" max="5"
+            value="3">
+        </p>
+
+        <p>
+           <label for="foto">Foto de perfil</label> 
+           <input type="file" name="foto" id="foto">
+        </p>
+        
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>
+
+<!-- 📝 MATERIAL DE APOIO
+
+
+Input:color
+
+	<input type="color" name=" " id=" ">
+
+   - Pode ser definida uma cor inicial, usando o atributo value=" ".
+
+	Ex:	<label for="icor">Cor: </label>
+		<input type="color" name="cor" id="icor" value="#00ff00">
+
+
+Input:range
+
+	<input type="range" name=" " id=" ">
+
+   - Por padrão, o range começa sempre em 50 (no meio), variando de 0 a 100, mas pode ser personalizado, utilizando os atributos value=" ", min=" " e max=" ", respectivamente.
+
+	Ex:	label for="inivel">Nível de Satisfação: </label>
+		<input type="range" name="nivel" id="inivel" min="1" max="5" value="2">
+
+
+Input:file
+
+	<input type="file" name=" " id=" ">
+
+	- Ao trabalhar com input:file, usar sempre o atributo method="POST" dentro da tag <form>, para que não haja uma limitação de 3.000 bites no envio do arquivo.
+
+	Ex:	<form action="cadastro.php" method="POST" autocomplete="on">
+			<p>
+				<label for="ifoto">Foto do perfil: </label>
+				<input type="file" name="foto" id="ifoto">
+			</p>
+		</form> -->
