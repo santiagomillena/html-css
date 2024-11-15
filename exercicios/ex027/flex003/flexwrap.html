@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex-Wrap ChatGPT</title>
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            background-color: lightseagreen;
+        }
+
+        .item {
+            flex: 0 0 100px; /* largura fixa de 100px */
+            height: 100px;
+            background-color: steelblue;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid black;
+        }
+        .imagem{
+            width: 60vw;
+            margin-top: 40px;
+            margin-left: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+    <div>
+        <img class="imagem" src="flex-wrap-1024x636.png" alt="Flex-wrap">
+    </div>
+</body>
+</html>
+
+<!-- 
+
+O flex-wrap é uma propriedade do Flexbox no CSS que controla se os itens flexíveis (filhos de um contêiner flexível) devem ou não quebrar para a próxima linha quando não houver espaço suficiente no contêiner principal.
+
+Por padrão, o flex-wrap está configurado como nowrap, o que significa que todos os itens permanecem em uma única linha (ou coluna, no caso de um layout flexível na direção de coluna), mesmo que isso faça os itens ficarem comprimidos.
+
+Valores do flex-wrap:
+
+🔸nowrap (padrão):
+
+Os itens não quebram para a próxima linha.
+Todos permanecem em uma única linha, e o contêiner pode "explodir" o tamanho para acomodá-los.
+css
+
+    .container {
+        display: flex;
+        flex-wrap: nowrap;
+}
+
+🔸wrap:
+
+Os itens quebram para a próxima linha se não couberem no espaço disponível.
+Cada linha respeita o espaço disponível no contêiner.
+css
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+}
+
+🔸wrap-reverse:
+
+Funciona como o wrap, mas as linhas quebradas são dispostas em ordem inversa (de baixo para cima em layouts de linha ou da direita para a esquerda em layouts de coluna). 
+
+    .container {
+        display: flex;
+        flex-wrap: wrap-reverse;
+}
+    -->
