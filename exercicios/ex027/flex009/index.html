@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex-basis</title>
+    <style>
+        div.container{
+            background-color: lightcoral;
+
+            display: flex;
+            flex-flow: row nowrap;
+        }
+        div.item{
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+            flex-basis: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">A</div>
+        <div class="item">Outro conteúdo</div>
+        <div class="item">C</div>
+        <div class="item">Conteúdo um pouco maior</div>
+        <div class="item">E</div>
+        <div class="item">Conteúdo maior ainda, que vai ocupar mais espaço.</div>
+        <div class="item">G</div>
+    </div>
+</body>
+</html>
+
+<!-- 
+flex-basis: sempre com o valor auto por padrão
+isso significa que o tamanho do elemento no seu eixo principal (no caso é a largura por estar em row mas se tivesse em coluna seria a altura) é ditada através do tamanho do seu conteúdo.
+
+🔸flex-basis: auto;
+// Esse é o padrão, ele faz com que a largura da base seja igual a do item. Se o item não tiver tamanho especificado, o tamanho será de acordo com o conteúdo.
+
+🔸flex-basis: unidade;
+// Pode ser em %, em, px e etc.
+
+🔸flex-basis: 0;
+// Se o grow for igual ou maior que 1, ele irá tentar manter todos os elementos com a mesma largura, independente do conteúdo (por isso 0 é o valor mais comum do flex-basis). Caso contrário o item terá a largura do seu conteúdo.
+ -->
