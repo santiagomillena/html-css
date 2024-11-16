@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex-grow flex-wrink</title>
+    <style>
+        div.container{
+            background-color: lightcoral;
+            display: flex;
+            flex-flow: row nowrap;
+        }
+        div.item{
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+            flex-basis: 250px;
+            flex-shrink: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+</body>
+</html>
+
+<!-- 
+
+🔸flex-grow: Define a habilidade de um flex item de crescer, caso necessário. 
+        flex-grow: <numero>; // o valor default(padrão) é 0.
+        Valores negativos não são aceitos pela propriedade.
+
+🔸flex-shrink: Define a habilidade de um flex item de encolher, caso necessário.
+        flex-shrink: <número>; // o valor padrão é 0.
+// Um item com shrink: 3 diminuirá 3 vezes mais que um item com 1.
+
+        valores padrão:
+
+        🔹flex-grow: 0; // Obedece o width do elemento ou o flex-basis.
+
+        🔹flex-shrink: 1; // Valor padrão, permite que os itens tenham os seus tamanhos (seja esse tamanho definido a partir de width ou flex-basis) reduzidos para caber no container. -->
