@@ -1,0 +1,87 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body, html{
+    background-color: lightgray;
+}
+header{
+    background-color: gray;
+}
+header h1 {
+    color: white;
+    text-shadow: 1px 1px black;
+    padding: 10px;
+}
+menu {
+    margin-bottom: 10px;
+}
+menu > ul {
+    display: block;
+    list-style-type: none;
+}
+menu > ul > li > a {
+    display: block;
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    transition-duration: .5s;
+    text-align: center;
+    border-top: 2px solid gray;
+}
+menu > ul > li > a:hover{
+    background-color: #bababa;
+    color: black;
+    cursor: pointer;
+    padding: 10px;
+}
+main {
+    background-color: white;
+    width: 96vw;
+    margin: auto;
+    padding: 10px;
+    border-radius: 8px;
+    line-height: 1.5em;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.364);
+}
+section {
+    margin-top: 10px;
+}
+
+section h2 {
+    margin-bottom: 10px;
+}
+
+/* Todas as demais mídias */
+
+/* Typical Device Breakpoints
+    Pequenas telas: até 576px
+    Celular: de 600px até 768px
+    Tablet: 992px até 1200px
+    Grandes telas: acima de 1400px
+*/
+
+@media (min-width: 640px) {
+    menu > ul {
+        display: flex;
+        flex-flow: row nowrap;
+    }
+    menu > ul > li > a {
+        margin: 8px; 
+    }
+}
+
+@media (min-width: 768px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+    
+}
